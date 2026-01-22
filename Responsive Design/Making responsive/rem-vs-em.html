@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 5px;
+        }
+        div {
+            text-align: center;
+            padding: 50px;
+            background-color: aqua;
+            /* font-size: 30px; */
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        .box {
+            text-align: center;
+            padding: 50px;
+            background-color: aqua;
+            font-size: 30px;
+        }
+        h2 {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+
+    <!--
+    
+    em 
+
+    1. em is relative to the font size of its direct nearest parent
+    2. em bacause of the ability to control an area of design 
+       by default : 1em = 16px
+
+    nearest parent ke hisab se chlega
+    matlab agae kisi div ke andar kuch text likha hai and we want ki us div ke according font size le to em us kar denge 
+    first parent container ko font size de denge
+    then and jiska bhi font size badhana hoga use em mai agian font de denge
+
+
+
+    rem
+    
+    1. rem is only relative to the html root font-size
+    2. the ability to scale type across the entire page easily
+    
+    -->
+
+    <div>
+        <h1>usimg rem unit</h1>
+    </div>
+
+    <div class="box">
+        <h2>suing em unit</h2>
+    </div>
+    
+</body>
+</html>

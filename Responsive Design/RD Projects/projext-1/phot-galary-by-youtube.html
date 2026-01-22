@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            height: 200px;
+            width: 800px;
+            background-color: aqua;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 1fr;
+            gap: 5px
+        }
+        img {
+            height: 100%;
+            width: 100%;
+        }
+        @media screen and (max-width: 900px) {
+            .container {
+                height: 400px;
+                width: 400px;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr ;
+            
+            }
+        }
+        @media screen and (max-width: 440px) {
+            .container {
+                height: 800px;
+                width: 200px;
+                grid-template-columns: 1fr ;
+                grid-template-rows: repeat(4, 1fr) ;
+            
+            }
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <div class="container">
+        <div class="box">
+            <img src="https://imgs.search.brave.com/r0EEXFZQGrrU7nbtxWQ8U4Fzy5L2r-1ALmALrhM-cq0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQvdmlyYXQta29o/bGktcGljdHVyZXMt/eWM4ZGZwY2pzc3Az/czRzZS5qcGc" alt="">
+        </div>
+        <div class="box">
+            <img src="https://imgs.search.brave.com/r0EEXFZQGrrU7nbtxWQ8U4Fzy5L2r-1ALmALrhM-cq0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQvdmlyYXQta29o/bGktcGljdHVyZXMt/eWM4ZGZwY2pzc3Az/czRzZS5qcGc" alt="">
+        </div>
+        <div class="box">
+            <img src="https://imgs.search.brave.com/r0EEXFZQGrrU7nbtxWQ8U4Fzy5L2r-1ALmALrhM-cq0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQvdmlyYXQta29o/bGktcGljdHVyZXMt/eWM4ZGZwY2pzc3Az/czRzZS5qcGc" alt="">
+        </div>
+        <div class="box">
+            <img src="https://imgs.search.brave.com/r0EEXFZQGrrU7nbtxWQ8U4Fzy5L2r-1ALmALrhM-cq0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvZmVhdHVy/ZWQvdmlyYXQta29o/bGktcGljdHVyZXMt/eWM4ZGZwY2pzc3Az/czRzZS5qcGc" alt="">
+        </div>
+    </div>
+    
+</body>
+</html>

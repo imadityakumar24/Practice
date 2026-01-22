@@ -1,0 +1,109 @@
+<!--
+
+SAAS or SCSS are same (muliple name hai bas)
+
+SCSS - CSS3 - Syntactically Awesome style sheet
+SAAS - CSS
+
+Using the live saas compiler extention by glenn marks to run this
+
+What is Sass?
+
+Sass stands for Syntactically Awesome Stylesheet
+Sass is an extension to CSS
+Sass is a CSS pre-processor
+Sass is completely compatible with all versions of CSS
+Sass reduces repetition of CSS and therefore saves time
+Sass was designed by Hampton Catlin and developed by Natalie Weizenbaum in 2006
+Sass is free to download and use
+
+Why Use Sass?
+
+Stylesheets are getting larger, more complex, and harder to maintain. This is where a CSS pre-processor can help.
+
+Sass lets you use features that do not exist in CSS, like variables, nested rules, mixins, imports, inheritance, built-in functions, and other stuff.
+
+How Does Sass Work?
+
+A browser does not understand Sass code. Therefore, you will need a Sass pre-processor to convert Sass code into standard CSS.
+
+This process is called transpiling. So, you need to give a transpiler (some kind of program) some Sass code and then get some CSS code back.
+
+
+benfits
+
+create a index folder for html
+then create scss folder inside it create a scss file  (file-name.scss)
+write your code in scss file 
+and then when you install live saas compiler externsion
+in the bottom of vs code  new option will start showing - watch saas
+so click on the watch saas
+when it start showing watching
+means now scss is working 
+and then and it will direcly create a css file and css.map file and scss file code is directly copy to css file
+so using live server se your html file
+
+
+Note:
+
+live compilation of sccs is showing in terminal 
+so if there is a little mistake in sccs file , our css will not work
+its like doing DSA , having semicolon issue will effect entire code file
+
+
+Using the live saas compiler extention by glenn marks to run this
+
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="SCSS/main.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>Using simple 5 rem</h1>
+        <h2>using additon operator 5px + 5px</h2>
+        <h3>using Multiplication operator 5px * 2</h3>
+    </header>
+
+    <div class="main-body">
+        <b style="color: white; font-size: xx-large; text-transform: uppercase;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"> i am using css variables in this</b>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio minus ipsum quae, iusto non quidem molestiae beatae dolore ipsa reprehenderit!</p>
+    </div>
+    
+    <section>
+        <button>submit</button> <br>
+        <pre> 
+            IM USING NESTING 
+
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, beatae. Quae odio dolore deleniti similique quas veritatis facere. Veniam quo autem vitae similique facere blanditiis.
+
+        </pre> <br>
+    </section>
+
+    <div class="box-contianer">
+        <div class="box-1">using the mixing and passing parameters</div>
+        <div class="box-2">using the mixing and passing parameters</div>
+        <div class="box-3">using the mixing and passing parameters</div>
+    </div>
+
+    <div class="extend-fauture">
+        <div class="div-1">Using extend feature</div>
+        <div class="div-2">Using extend feature</div>
+        <div class="div-3">Using extend feature</div>
+    </div>
+
+    <div class="placehoder-features">
+        <div class="dbba-1">Using plachoder feature</div>
+        <div class="dbba-2">Using plachoder feature</div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline Interanl Exteranl CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #internal-css {
+            background-color:aquamarine;
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+
+    <H1 style="color: ref; background-color: yellow;">Heading tag using inline css</H1>
+
+    <h1 id="internal-css">Using external css means in head tag select the tag and apply properties</h1>
+
+    <h1 id="external-css">External CSS means create a separte css file and link to html</h1>
+
+    <h2>Inheritence of style </h2>
+    <h2>means if we apply property on parent that property will reflect to child</h2>
+
+    <p>
+        <em>Inheritence of p on em tag </em>
+
+        <h3>h3 is not a child attribute of p that's why p properties are not working on h3</h3>
+        <h3 id="Change-color">This is h3 changing color using external css</h3>
+    </p>
+    
+</body>
+</html>

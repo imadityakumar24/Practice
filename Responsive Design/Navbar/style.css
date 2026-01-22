@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+header {
+    width: 100vw;
+    background-color: rgb(244, 88, 119);
+    min-height: 10vh;
+    max-height: 10vh;
+    font-size: 1.3rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.company-name {
+    padding: 10px;
+    color: white;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    list-style: none;
+}
+
+a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+#menu-open,
+#menu-close {
+    display: none;
+}
+/* 
+@media screen and (max-width: 1000px) {
+    .company-name {
+        font-size: 1.5rem;
+        color: blue;
+    }
+
+    a {
+        font-size: 1.2rem;
+        color: blue;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    a {
+        display: none;
+    }
+} */
+
+
+@media screen and (min-width: 768px){
+    /* #nav-links {
+        display: inline-block;
+        flex-direction: row;
+    } */
+    #menu-open, #menu-close {
+        display: none;
+    }
+     /* .Class-nav-links {
+        display: none;
+     } */
+}
+
+
+@media screen and (max-width: 768px) {
+/* @media screen and (min-width: 0px) and (max-width: 768px) { */
+    #nav-links {
+        display: none;
+    }
+    #menu-open {
+        display: block;
+    }
+
+    #menu-open, #menu-close {
+        cursor: pointer;
+    }
+    .Class-nav-links {
+        height: auto;
+        /* display: none; */
+        position: absolute;
+        top: 10vh;
+        /* top: 65px; */
+        left: 0;
+        width: 100vw;
+        padding: 20px 40px;
+        background-color: aquamarine;
+        display: flex;
+        flex-direction: column;
+    }
+    .Class-nav-links {
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+    #nav-links a {
+        margin: 30px;
+        color:black;
+        font-weight: bold;
+    }
+}
+
+
+
+
+
+
+
+

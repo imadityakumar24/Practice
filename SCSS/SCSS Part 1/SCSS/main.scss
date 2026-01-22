@@ -1,0 +1,820 @@
+$bg-color: lightgreen;
+$font-color: blue;
+$pink-color: rgb(251, 8, 170);
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-header {
+    width: 100vw;
+    height: 30vh;
+    display: grid;
+    place-items: center;
+    background-color: rgb(225, 238, 249);
+}
+
+
+/*
+
+=============  SAAS or SCSS operators  =================
+
+Sass supports a handful of useful operators for working with different values. These include the standard mathematical operators like + and *, as well as operators for various other types:
+
+== and != are used to check if two values are the same.
++, -, *, /, and % have their usual mathematical meaning for numbers, with special behaviors for units that matches the use of units in scientific math.
+<, <=, >, and >= check whether two numbers are greater or less than one another.
+and, or, and not have the usual boolean behavior. Sass considers every value "true" except for false and null.
++, -, and / can be used to concatenate strings.
+
+*/
+
+
+h1 {
+    color: red;
+    font-size: 10px;
+}
+
+
+h2 {
+    color: rgb(34, 133, 209);
+    font-size: 15px + 15px;
+}
+
+
+h3 {
+    color: rgb(84, 182, 9);
+    font-size: 5px * 4;
+}
+
+
+
+
+/*
+
+=================  SAAS or SCSS Variables  =================
+
+Variables are a way to store information that you can re-use later.
+
+With Sass, you can store information in variables, like:
+
+strings
+numbers
+colors
+booleans
+lists
+nulls
+Sass uses the $ symbol, followed by a name, to declare variables:
+
+Sass Variable Syntax:
+
+$variablename: value;
+The following example declares 4 variables named myFont, myColor, myFontSize, and myWidth. After the variables are declared, you can use the variables wherever you want:
+
+SCSS Syntax:
+
+$myFont: Helvetica, sans-serif;
+$myColor: red;
+$myFontSize: 18px;
+$myWidth: 680px;
+
+body {
+  font-family: $myFont;
+  font-size: $myFontSize;
+  color: $myColor;
+}
+
+#container {
+  width: $myWidth;
+}
+
+*/
+
+
+
+
+.main-body {
+    padding: 30px;
+    // height: 200px;
+    width: 100vw;
+    background-color: $bg-color;
+    color: $font-color;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+    // @include flex-property();   
+
+    b , p {
+        border: 1px solid black;
+        border-radius: 10px;
+        // min-width: 1rem;
+        // max-width: 1rem;
+        padding: 10px;
+        margin: 10px;
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .main-body {
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+
+
+
+/*
+
+================== SAAS or SCSS Nesting ============
+
+Sass Nested Rules
+Sass lets you nest CSS selectors in the same way as HTML.
+
+Look at an example of some Sass code for a site's navigation:
+
+Example
+SCSS Syntax:
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+}
+
+Notice that in Sass, the ul, li, and a selectors are nested inside the nav selector.
+
+While in CSS, the rules are defined one by one (not nested):
+
+*/
+
+
+section {
+    height: 300px;
+    width: 100vw;
+    background-color: khaki;
+    padding: 40px;
+
+    button {
+        margin: 20px;
+        padding: 10px;
+        background-color: white;
+        color: $pink-color;
+        border: 1 px solid blue;
+
+        // & sign is same considered as button ,
+
+        &:hover {
+            background-color: rgb(236, 250, 108);
+            color: red;
+        }
+
+    }
+
+    pre {
+        padding: 10px;
+        background-color: white;
+        color: $font-color;
+        border: 1 px solid blue;
+        overflow: scroll;
+
+        &:hover {
+            background-color: rgb(127, 246, 246);
+            color: red;
+        }
+    }
+}
+
+
+
+
+/*
+
+==================== SAAS or SCSS Mixins ================
+
+Sass Mixins
+The @mixin directive lets you create CSS code that is to be reused throughout the website.
+
+The @include directive is created to let you use (include) the mixin.
+
+Defining a Mixin
+A mixin is defined with the @mixin directive.
+
+Sass @mixin Syntax:
+
+@mixin name {
+  property: value;
+  property: value;
+  ...
+}
+The following example creates a mixin named "important-text":
+
+SCSS Syntax:
+
+@mixin important-text {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid blue;
+}
+
+Tip: A tip on hyphens and underscore in Sass: Hyphens and underscores are considered to be the same. This means that @mixin important-text { } and @mixin important_text { } are considered as the same mixin!
+
+Using a Mixin
+The @include directive is used to include a mixin.
+
+Sass @include mixin Syntax:
+
+selector {
+  @include mixin-name;
+}
+
+*/
+
+@mixin flex-property {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@mixin boxes-width {
+    width: 300px;
+    // height: 100vh;
+    // height: 300px;
+    // height: calc(400px - 0px);
+    height: 80%;
+    // box-sizing: border-box;
+
+}
+
+
+// @mixin parameter-topic ($color-value) {
+//     color: color-value;
+// }
+
+.box-contianer {
+    width: 100vw;
+    // height: 400px;
+    padding: 40px;
+    background-color: bisque;
+    padding: 10px;
+    @include flex-property;
+    border: 2px solid black
+}
+
+.box-1, .box-2, .box-3 {
+    // z-index: 11;
+    // position: absolute;
+    // height: 100vh;
+    height: auto;
+    padding: 5px;
+    margin: 10px;
+    color: white;
+    font-size: 1.1em;
+    @include flex-property();
+    @include boxes-width;
+    background-color: rgb(174, 51, 10);
+}
+
+@media screen and (max-width: 700px) {
+
+        .box-contianer {
+            flex-wrap: wrap;
+        }
+
+        .box-1 {
+            font-size: 1em;
+            color: aqua;
+        }
+        .box-2 {
+            font-size: 1em;
+            color: aqua;
+        }
+        .box-3 {
+            font-size: 1em;
+            color: aqua;
+        }
+    }
+
+
+
+
+// .box-1, .box-2, .box3 {
+//     @include parameter-topic(white);
+// }
+
+
+
+
+/*
+
+
+===========  SAAS or SCSS extend ================
+
+
+Sass @extend Directive
+The @extend directive lets you share a set of CSS properties from one selector to another.
+
+The @extend directive is useful if you have almost identically styled elements that only differ in some small details.
+
+in extend we don't pass parameters
+
+The following Sass example first creates a basic style for buttons (this style will be used for most buttons). Then, we create one style for a "Report" button and one style for a "Submit" button. Both "Report" and "Submit" button inherit all the CSS properties from the .button-basic class, through the @extend directive. In addition, they have their own colors defined:
+
+SCSS Syntax:
+
+.button-basic  {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-report  {
+  @extend .button-basic;
+  background-color: red;
+}
+
+.button-submit  {
+  @extend .button-basic;
+  background-color: green;
+  color: white;
+}
+
+
+*/
+
+/*
+
+// working correct now i am writing little clearner code
+
+.extend-fauture {
+    padding: 30px;
+    @include flex-property();
+}
+
+.div-1 {
+    color: red;
+    height: 20vh;
+    width: 20vw;
+    font-size: 2em;
+    text-transform: uppercase;
+    border: 2px solid black;
+    background-color: rgb(195, 252, 110);
+    padding: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .extend-fauture {
+        flex-wrap: wrap
+    }
+    .div-1 {
+        font-size: 1em;
+        color: aqua;
+    }
+}
+
+.div-2 {
+    @extend .div-1;
+    color: blue;
+}
+
+.div-3 {
+    @extend .div-1;
+    color: rgb(228, 11, 141);
+}
+*/    
+
+
+/*
+.extend-fauture {
+    padding: 30px;
+    @include flex-property();
+    // flex-wrap: wrap;
+    
+    .div-1 {
+        color: red;
+        height: 20vh;
+        width: 20vw;
+        font-size: 2em;
+        text-transform: uppercase;
+        border: 2px solid black;
+        background-color: rgb(195, 252, 110);
+        padding: 20px;
+    }
+
+
+    // .div-2 {
+    //     @extend .div-1;
+    //     color: blue;
+    // }
+
+    // .div-3 {
+    //     @extend .div-1;
+    //     color: rgb(228, 11, 141);
+    // }
+
+
+    @media screen and (max-width: 700px) {
+        // .extend-fauture {
+        //     flex-wrap: wrap
+        // }
+
+        // .div-1 {
+        //     font-size: 1em;
+        //     color: aqua;
+        // }
+        // .div-2 {
+        //     font-size: 1em;
+        //     color: aqua;
+        // }
+        // .div-3 {
+        //     font-size: 1em;
+        //     color: aqua;
+        // }
+
+        .div-1, .div-2, .div-3 {
+            font-size: 1em;
+            color: aqua;
+        }
+    }
+
+    .div-2 {
+        @extend .div-1;
+        color: blue;
+    }
+
+    .div-3 {
+        @extend .div-1;
+        color: rgb(228, 11, 141);
+    }
+
+}
+*/
+
+
+/*
+
+// media query not working
+
+.extend-fauture {
+    padding: 30px;
+    @include flex-property();
+    // flex-wrap: wrap;
+    
+    .div-1 {
+        color: red;
+        height: 20vh;
+        width: 20vw;
+        font-size: 2em;
+        text-transform: uppercase;
+        border: 2px solid black;
+        background-color: rgb(195, 252, 110);
+        padding: 20px;
+    }
+
+    @media screen and (max-width: 700px) {
+        // .extend-fauture {
+        //     flex-wrap: wrap
+        // }
+
+        .div-1 {
+            font-size: 1em;
+            color: aqua;
+        }
+        .div-2 {
+            font-size: 1em;
+            color: aqua;
+        }
+        .div-3 {
+            font-size: 1em;
+            color: aqua;
+        }
+    }
+
+    .div-2 {
+        @extend .div-1;
+        color: blue;
+    }
+
+    .div-3 {
+        @extend .div-1;
+        color: rgb(228, 11, 141);
+    }
+
+}
+*/
+
+
+
+/*
+// media query is working
+
+.extend-fauture {
+    padding: 30px;
+    @include flex-property();
+    // flex-wrap: wrap;
+    
+    .div-1 {
+        color: red;
+        height: 20vh;
+        width: 20vw;
+        font-size: 2em;
+        text-transform: uppercase;
+        border: 2px solid black;
+        background-color: rgb(195, 252, 110);
+        padding: 20px;
+    }
+
+
+    .div-2 {
+        @extend .div-1;
+        color: blue;
+    }
+
+    .div-3 {
+        @extend .div-1;
+        color: rgb(228, 11, 141);
+    }
+
+
+    @media screen and (max-width: 700px) {
+
+        .div-1, .div-2, .div-3 {
+            font-size: 1em;
+            color: aqua;
+        }
+    }
+
+}
+*/
+
+
+
+// media query is working
+
+.extend-fauture {
+    padding: 30px;
+    @include flex-property();
+    flex-wrap: wrap;
+    
+    .div-1 {
+        color: red;
+        // height: 20vh;
+        // width: 20vw;
+        margin: 10px;
+        padding: 60px;
+        font-size: 2em;
+        text-transform: uppercase;
+        border: 2px solid black;
+        background-color: rgb(195, 252, 110);
+        padding: 20px;
+    }
+
+    .div-2 {
+        @extend .div-1;
+        color: blue;
+    }
+
+    .div-3 {
+        @extend .div-1;
+        color: rgb(228, 11, 141);
+    }
+
+    @media screen and (max-width: 700px) {
+
+        .div-1 {
+            font-size: 1em;
+            color: aqua;
+        }
+        .div-2 {
+            font-size: 1em;
+            color: aqua;
+        }
+        .div-3 {
+            font-size: 1em;
+            color: aqua;
+        }
+    }
+
+}
+
+
+
+/*
+// media query is working
+
+.extend-fauture {
+    padding: 30px;
+    @include flex-property();
+    
+    .div-1 {
+        color: red;
+        // height: 20vh;
+        // width: 20vw;
+        margin: 10px;
+        padding: 60px;
+        font-size: 2em;
+        text-transform: uppercase;
+        border: 2px solid black;
+        background-color: rgb(195, 252, 110);
+        padding: 20px;
+    }
+
+    .div-2 {
+        @extend .div-1;
+        color: blue;
+    }
+
+    .div-3 {
+        @extend .div-1;
+        color: rgb(228, 11, 141);
+    }
+
+    @media screen and (max-width: 700px) {
+
+        .extend-fauture {
+            flex-wrap: wrap;
+        }
+
+        .div-1 {
+            font-size: 1em;
+            color: aqua;
+        }
+        .div-2 {
+            font-size: 1em;
+            color: aqua;
+        }
+        .div-3 {
+            font-size: 1em;
+            color: aqua;
+        }
+    }
+
+}
+*/
+
+
+/*
+// media query is not working
+
+@mixin flex-wrap-text {
+    flex-wrap: wrap;
+}
+
+.extend-fauture {
+    padding: 30px;
+    @include flex-property();
+    
+    .div-1 {
+        color: red;
+        margin: 10px;
+        padding: 60px;
+        font-size: 2em;
+        text-transform: uppercase;
+        border: 2px solid black;
+        background-color: rgb(195, 252, 110);
+        padding: 20px;
+    }
+
+    .div-2 {
+        @extend .div-1;
+        color: blue;
+    }
+
+    .div-3 {
+        @extend .div-1;
+        color: rgb(228, 11, 141);
+    }
+
+    @media screen and (max-width: 700px) {
+
+        .extend-fauture {
+            @include flex-wrap-text;
+        }
+
+        .div-1 {
+            font-size: 1em;
+            color: aqua;
+        }
+        .div-2 {
+            font-size: 1em;
+            color: aqua;
+        }
+        .div-3 {
+            font-size: 1em;
+            color: aqua;
+        }
+    }
+
+}
+*/
+
+
+
+
+/*
+
+==============  SAAS or SCSS placeholders  ===================
+
+
+matlab reusbale code bna lenge jab marzi use krenge aur ye code css file mai nhi show kregaa
+
+SASS Placeholder Selectors
+
+In SASS, placeholder selectors are used for creating reusable styles without adding unnecessary code to the final compiled CSS. They are similar to mixins but without arguments.
+
+The key difference is that placeholders do not get compiled into the final CSS unless explicitly used with the @extend directive.
+
+What Are Placeholder Selectors?
+A placeholder selector is defined using the % symbol. These selectors hold reusable styles that you can apply to other selectors using the @extend rule. The main advantage of placeholder selectors is that they are not included in the compiled CSS file unless extended, helping to keep the CSS file clean and efficient.
+
+Syntax:
+
+%placeholder-name {
+  /* Property declarations 
+}
+
+@extend %placeholder-name;
+
+*/
+
+
+%reusable-code {
+    margin: 20px;
+    padding: 30px;
+    color: white;
+    text-decoration: none;
+    @include flex-property();
+    border: 2px solid blue;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 1em;
+    border-radius: 10px;
+    text-decoration:double;
+    word-spacing: 8px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.placehoder-features {
+    @include flex-property();
+    width: 100vw;
+    padding: 30px;
+    background-color: rgb(241, 204, 192);
+
+    .dbba-1 {
+        background-color: rgb(103, 125, 21);
+        @extend %reusable-code;
+    }
+
+    .dbba-2 {
+        background-color: rgb(31, 68, 137);
+        @extend %reusable-code;
+    }
+    /* 
+    // media query on the placehoder-feaature will don't work 
+    // hme main container ke bahr hi media query likhni pdegi
+    @media screen and (max-width: 700px) {
+    .placehoder-features {
+        flex-wrap: wrap;
+    }
+    */
+}
+
+
+/*
+
+reed this documentaition for better understanding
+
+https://www.sitepoint.com/cross-media-query-extend-sass/
+
+*/
+
+
+// media query on the placehoder-feaature will don't work 
+// hme main container ke bahr hi media query likhni pdegi
+@media screen and (max-width: 700px) {
+    .placehoder-features {
+        flex-wrap: wrap;
+    }
+}
+

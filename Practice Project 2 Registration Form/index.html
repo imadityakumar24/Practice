@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/11247/11247782.png">
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div id="heading">
+            <h2>User Registration Form</h2>
+        </div>
+
+        <form action="submit">
+            <label for="full-name" >Enter full name</label>
+            <input type="text" id="full-name" placeholder="Name" required>
+
+            <label for="Password">Enter Password</label>
+            <input type="text" id="Password" placeholder="Password" required>
+
+            <label for="address">Enter Your Adreess</label>
+            <textarea name="address" id="address" rows="3" cols="50" required></textarea>
+
+            <div id="choose-gender">
+
+                <label for="Gender">Choose Gender :</label>
+
+                <input id="Male" type="radio" name="Gender" value="Male" required>
+                <label for="Male">Male</label>
+
+                <input id="Female" type="radio" name="Gender" value="Female" required>
+                <label for="Female">Female</label>
+
+                <input id="Others" type="radio" name="Gender" value="Others" required>
+                <label for="Others">Others</label>
+
+            </div>
+
+            <label for="age">Enter Your Age</label>
+            <input type="number" name="age" id="age" min="1" max="100" placeholder="Age" required>
+
+            <label for="profile-photo" required>Upload Profile Photo</label>
+            <input id="Photo-upload" type="file" required>
+
+            <div class="buttons">
+                <button id="save">Save</button>
+                <button id="submit">Submit</button>
+                <button id="reset">Reset</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+
+</html>

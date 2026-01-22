@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 300px;
+            width: 300px;
+            font-size: 32px;
+            background-color: brown;
+        }
+
+        /* @media screen and (max-width:600px) {
+            .container {
+                height: 200px;
+                width: 200px;
+                font-size: 32px;
+                background-color: rgb(151, 238, 125);
+            }
+        } */
+
+        @media screen and (min-width:700px) {
+            .container {
+                height: 600px;
+                width: 600px;
+                font-size: 40px;
+                color: white;
+                background-color: rgb(151, 238, 125);
+                transition: smooth;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        box 1
+    </div>
+    
+</body>
+</html>

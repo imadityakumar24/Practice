@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Decendent Selectors</title>
+
+    <style> 
+
+        /* Grouping selector property apply on all*/
+        #first, #second, #third {
+            background-color: lightblue;
+        }
+
+        /* Decendent selector means #second ke andar jo h1 hai usi pe property apply karodo */    
+        #second, h1 {
+            background-color: crimson;
+        } 
+
+        #first p {
+            background-color: rgb(200, 254, 129);
+        }
+     
+    </style>
+
+</head>
+<body>
+
+    <div id="first">
+        <h1>heading tag</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, saepe!</p>
+    </div>
+
+     <div id="second">
+        <h1>heading tag</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, saepe!</p>
+    </div>
+
+    <div id="third">
+        <h1>heading tag</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque, saepe!</p>
+    </div>
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 600px;
+            width: 400px;
+            border: 2px solid black;
+        }
+        h1 {
+            color: rgb(54, 37, 245);
+            background-color: aliceblue;
+        }
+
+        /* @media (max-width: 500px) { */
+        /*
+
+        aproach jab phone se desktop ki size pe shift ho rhe hai
+        
+        min width ka matlab hai jese hi width 500px ho gyi ya  width usse jyada bhi hai
+        matlab width kam se kam 500px ho aur usse jyda kitni bhi ho chlegi to ye wali properties aply kardo
+        
+        */
+        @media (min-width: 500px) { 
+            h1 {
+                 color: rgb(19, 160, 6);
+                background-color: rgb(229, 250, 216);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h4 style="color: rgb(55, 3, 50);">aproach jab phone se desktop ki size pe shift ho rhe hai
+ </h4>
+
+    <h4 style="color: red;">Open the inspect and see the changes</h4>
+
+    <div>
+        <h1>This is h1 heading </h1>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,14 @@
+#external-css {
+    background-color: rgb(184, 192, 248);
+    color: rgb(212, 25, 25);
+}
+
+p {
+    color: crimson;
+    font-size: 60px;
+}
+
+#Change-color {
+    color: rgb(239, 243, 0);
+    background: #000;
+}
