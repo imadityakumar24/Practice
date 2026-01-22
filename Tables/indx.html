@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        table {
+            margin: 10px;
+            padding: 10px;
+            border-spacing: 20px;
+            
+        }
+
+        /* border collpass only work with table */
+        table, th, td {
+            border: 2px solid rgb(64, 228, 56);
+            /* border-collapse: collapse; */
+            border-style: groove;
+            text-align: center;
+            /* padding: 10px ; */
+            padding: 10px 10px;
+            border-radius: 20px;
+            /* margin: 10px; */   /* margin does not work wiht th and td beacuse thes are the content so margin ignore use border-spacing , only work when collpass not used*/
+        } 
+
+        /* th, td { */
+            /* border: 1px solid red; */
+            /* border-collapse: collapse; */
+            
+        /* } */
+
+
+
+    </style>
+
+</head>
+<body>
+    
+    <caption><strong>Deatails of the students</strong></caption>
+    <table>
+
+        <tr>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Roll no</th>
+        </tr>
+
+        <tr>
+            <td>Sachin kumar</td>
+            <td>Btech EE</td>
+            <td>11198088</td>
+        </tr>
+
+        <tr>
+            <td>Vivek kumar</td>
+            <td>Btech CE</td>
+            <td>1211980881</td>
+        </tr>
+
+        <tr>
+            <td>Subhash kumar</td>
+            <td>Btech CSE</td>
+            <td>1119808828</td>
+        </tr>
+
+    </table>
+
+</body>
+</html>
