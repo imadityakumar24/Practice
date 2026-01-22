@@ -1,0 +1,68 @@
+
+<!--
+
+grid container properties
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            border: 2px solid black;
+            display: grid;
+            row-gap: 10px;
+            column-gap: 10px;
+            /* isse hum bta sakte hai ki hme kitni colom cahiye */
+            /* grid-template-columns: repeat(4, 1fr); */
+            grid-template-columns: repeat(auto-fill, 100px);
+
+            /* grid-template-rows
+               isse hum ye bta sakte hai ki rows ki height kitni hogi , and box mai kitni row rakhni hai
+            */
+            grid-template-rows: 100px 100px;
+            /* 
+            grid-auto-rows: matlab jiske liye humne koi bhi height nhi di hai unhe ye wali by default height mil jayegi
+            */
+            /* grid-auto-rows: 50px; */
+            padding: 10px;
+            justify-content:space-evenly;
+
+
+        }
+        .box {
+            border: 2px solid blue;
+            padding: 10px;
+            background-color: coral;
+        }
+        
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box" id="box-1">box-1</div>
+        <div class="box" id="box-2">box-2</div>
+        <div class="box" id="box-3">box-3</div>
+        <div class="box" id="box-4">box-4</div>
+        <div class="box" id="box-5">box-5</div>
+        <div class="box" id="box-6">box-6</div>
+        <div class="box" id="box-7">box-7</div>
+        <div class="box" id="box-8">box-8</div>
+        <div class="box" id="box-9">box-9</div>
+        <div class="box" id="box-10">box-10</div>
+    </div>
+
+</body>
+</html>

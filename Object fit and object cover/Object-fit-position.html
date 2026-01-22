@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object fit  and position</title>
+    <style>
+        .container, .box {
+            height: 634px;
+            width: 634px;
+            border: 1px solid black;
+            background-color: aqua;
+        }
+        #first {
+            border: 3px solid red;
+            height: 466px;
+            width: 488px;
+            /* object fit ka matlab hai ki img ki height width ko pura cover krega means photo zoom ho jayegi */
+            object-fit: cover;
+            
+        }
+        #second {
+            border: 3px solid red;
+            height: 466px;
+            width: 488px;
+            object-fit: cover;
+            /* object fit contain ka matlab hai photo ko box ke andar fit kardi bina zoom kiye jiske karan vo apna size chota kar dega  */
+            /* object-fit: contain; */
+            /* object-position: top-right; */
+            object-position: top-left;
+            /* object-position: top-right; */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img id="first" src="Images/mountains.avif" alt="">
+    </div>
+
+    <div class="box">
+        <img id="second" src="Images/Maldives-image-1.avif" alt="">
+    </div>
+    
+</body>
+</html>

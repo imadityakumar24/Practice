@@ -1,0 +1,424 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 25vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  background-image: url("../Images/mountains.avif");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+header #header-text {
+  color: white;
+}
+header #header-text h1 {
+  font-size: 50px;
+  font-family: Calibri, Candara, Segoe UI, Optima, Arial, sans-serif;
+  color: white;
+  font-weight: bolder;
+}
+header #header-text p {
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: Calibri, Candara, Segoe UI, Optima, Arial, sans-serif;
+  color: white;
+  font-weight: bolder;
+}
+
+#grid-layout {
+  padding: 60px;
+  height: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgb(246, 249, 251);
+}
+
+.container-1 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.box-1, .box-2, .box-3, .box-4, .box-5, .box-6, .box-7, .box-8 {
+  height: 400px;
+  width: 300px;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0px 0px 5px 2px rgb(205, 205, 205);
+}
+
+.box-1 {
+  border: 0.5px solid gray;
+  height: 400px;
+  width: 300px;
+}
+.box-1 img {
+  width: 100%;
+  border-radius: 10px;
+  height: 50%;
+}
+.box-1 .blog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  color: rgb(13, 13, 116);
+  font-family: Calibri, Candara, Segoe UI, Optima, Arial, sans-serif;
+  margin: 20px;
+}
+.box-1 .blog-content p {
+  text-align: justify;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.box-1 .blog-content button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: rgb(85, 85, 220);
+}
+.box-1 .blog-content button:hover {
+  background-color: rgb(25, 25, 146);
+  color: white;
+  font-weight: bolder;
+}
+
+.box-2 {
+  border: 0.5px solid gray;
+  height: 400px;
+  width: 300px;
+}
+.box-2 img {
+  width: 100%;
+  border-radius: 10px;
+  height: 50%;
+}
+.box-2 .blog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  color: rgb(13, 13, 116);
+  font-family: Calibri, Candara, Segoe UI, Optima, Arial, sans-serif;
+  margin: 20px;
+}
+.box-2 .blog-content p {
+  text-align: justify;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.box-2 .blog-content button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: rgb(85, 85, 220);
+}
+.box-2 .blog-content button:hover {
+  background-color: rgb(25, 25, 146);
+  color: white;
+  font-weight: bolder;
+}
+
+.box-3 {
+  border: 0.5px solid gray;
+  height: 400px;
+  width: 300px;
+}
+.box-3 img {
+  width: 100%;
+  border-radius: 10px;
+  height: 50%;
+}
+.box-3 .blog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  color: rgb(13, 13, 116);
+  font-family: Calibri, Candara, Segoe UI, Optima, Arial, sans-serif;
+  margin: 20px;
+}
+.box-3 .blog-content p {
+  text-align: justify;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.box-3 .blog-content button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(85, 85, 220);
+  color: white;
+}
+.box-3 .blog-content button:hover {
+  background-color: rgb(25, 25, 146);
+  color: white;
+  font-weight: bolder;
+}
+
+.box-5 {
+  border: 0.5px solid gray;
+  height: 400px;
+  width: 300px;
+}
+.box-5 img {
+  width: 100%;
+  border-radius: 10px;
+  height: 50%;
+}
+.box-5 .blog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  color: rgb(13, 13, 116);
+  font-family: Calibri, Candara, Segoe UI, Optima, Arial, sans-serif;
+  margin: 20px;
+}
+.box-5 .blog-content p {
+  text-align: justify;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.box-5 .blog-content button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(85, 85, 220);
+  color: white;
+}
+.box-5 .blog-content button:hover {
+  background-color: rgb(25, 25, 146);
+  color: white;
+  font-weight: bolder;
+}
+
+.box-6 {
+  border: 0.5px solid gray;
+  height: 400px;
+  width: 300px;
+}
+.box-6 img {
+  width: 100%;
+  border-radius: 10px;
+  height: 50%;
+}
+.box-6 .blog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  color: rgb(13, 13, 116);
+  font-family: Calibri, Candara, Segoe UI, Optima, Arial, sans-serif;
+  margin: 20px;
+}
+.box-6 .blog-content p {
+  text-align: justify;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.box-6 .blog-content button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(85, 85, 220);
+  color: white;
+}
+.box-6 .blog-content button:hover {
+  background-color: rgb(25, 25, 146);
+  color: white;
+  font-weight: bolder;
+}
+
+.box-7 {
+  border: 0.5px solid gray;
+  height: 400px;
+  width: 300px;
+}
+.box-7 img {
+  width: 100%;
+  border-radius: 10px;
+  height: 50%;
+}
+.box-7 .blog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  color: rgb(13, 13, 116);
+  font-family: Calibri, Candara, Segoe UI, Optima, Arial, sans-serif;
+  margin: 20px;
+}
+.box-7 .blog-content p {
+  text-align: justify;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.box-7 .blog-content button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(85, 85, 220);
+  color: white;
+}
+.box-7 .blog-content button:hover {
+  background-color: rgb(25, 25, 146);
+  color: white;
+  font-weight: bolder;
+}
+
+.box-8 {
+  background-color: rgb(40, 40, 62);
+  border: 0.5px solid gray;
+  height: 400px;
+  width: 300px;
+}
+.box-8 img {
+  width: 93%;
+  border-radius: 10px;
+  height: 50%;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  box-shadow: 0px 0px 2px 2px rgb(255, 253, 253);
+}
+.box-8 .blog-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  color: white;
+  font-family: Calibri, Candara, Segoe UI, Optima, Arial, sans-serif;
+  margin: 20px;
+}
+.box-8 .blog-content p {
+  text-align: justify;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.box-8 .blog-content button {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  color: black;
+  font-weight: bolder;
+}
+.box-8 .blog-content button:hover {
+  background-color: rgb(215, 212, 212);
+  color: black;
+}
+
+.box-4 {
+  padding: 40px;
+}
+.box-4 h2 {
+  color: rgb(13, 13, 116);
+  font-size: 30px;
+}
+.box-4 ul {
+  padding: 20px;
+  color: rgb(13, 13, 116);
+}
+.box-4 ul li {
+  border-bottom: 0.5px solid rgb(13, 13, 116);
+  margin: 7px;
+  font-size: 20px;
+}
+
+footer {
+  height: 300px;
+  width: 100%;
+  background-color: rgb(204, 230, 247);
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 30px;
+}
+footer .footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+footer .footer-content h1 {
+  color: rgb(13, 13, 116);
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+footer .footer-content p {
+  color: rgb(13, 13, 116);
+  font-size: 20px;
+}
+footer .footer-content .email-button {
+  margin: 20px;
+}
+footer .footer-content input {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+footer .footer-content button {
+  padding: 10px;
+  background-color: rgb(247, 128, 85);
+  border: none;
+  color: white;
+  font-weight: bolder;
+  border-radius: 10px;
+  margin-left: 15px;
+}
+footer .footer-content button:hover {
+  background-color: rgb(240, 112, 65);
+}
+footer .contact {
+  margin-right: 20px;
+}
+footer .contact h2 {
+  color: rgb(13, 13, 116);
+  font-size: 30px;
+}
+footer .contact ul {
+  padding: 20px;
+  color: rgb(13, 13, 116);
+}
+footer .contact ul li {
+  margin: 3px;
+  font-size: 20px;
+}/*# sourceMappingURL=main.css.map */

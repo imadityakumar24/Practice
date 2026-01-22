@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    /* width: 100%; */
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 100px 0;
+}
+
+img {
+    max-width: 100%;
+    min-height: 250px;
+    height: auto;
+}
+
+.container {
+    width: 95%;;
+    /* width: 1200px; */
+    display: grid;
+    gap: 5px;
+    /* grid-template-columns: repeat(4, minmax(250px, 1fr));
+    grid-template-rows:    repeat(4, minmax(250px, 1fr)); */
+
+    /* grid-template-columns: repeat(auto-fitt, minmax(250px, 1fr)); */
+    /* grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows:    repeat(2, minmax(250px, 1fr)); 
+    /* grid-template-rows:    repeat(auto-fill, minmax(250px, 1fr));  */
+
+    /*
+    
+    auto-fill kar matlba hai jitne container aa skte hai container mai daal do , 
+
+    auto-fitt ka matlab hai jitna bhi coluom humne likha hoga usi ka size bdha ke container ki width cover kregga
+
+
+    */
+}
