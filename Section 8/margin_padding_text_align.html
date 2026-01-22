@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            background-color: antiquewhite;
+            margin-bottom: 30px;
+        }
+
+        
+        h2 {
+            background-color: rgb(255, 141, 163);
+            /* h2 margin is not working beacuse margin overlaps and the larger margin between them is used 30 px and 10px 30px is larger so this margin is applicable */
+            margin-top: 20px;
+        }
+
+        span {
+            background-color: aqua;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        big {
+            background-color: rgb(238, 171, 236);
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        #first {
+            background-color: hsl(67, 100%, 57%);
+            margin-left: 40%;
+        }
+
+        #second {
+            background-color: lawngreen;
+            margin-right: 70%;
+        }
+
+        div {
+            text-align: center;
+        }
+
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Learning margin and padding</h1>
+    <h2>Learning margin and padding</h2>
+
+    <span>Span : inline element don't have vertical margin means top and bottom margin don't work</span> <br>
+    <big>Big:    inline element don't have vertical margin means top and bottom margin don't work</big> <br>
+
+    <strong id="first">Inline elements have left and right margin</strong> <br>
+    <strong id="second" style="float: right;">Inline elements have left and right margin</strong> <br>
+
+    <!-- text-align does not work on an individual inline element itself; rather, it's used on the parent container to align the inline content within it [1]. In your code snippet, you are attempting to apply text-align: right; to the <strong> element itself.  -->
+
+    <!-- <strong id="second" style="text-align: right;">Inline elements have left and right margin</strong> <br> -->
+
+    <br> <br>
+    
+    <!-- 
+    woking of text align with an example 
+    
+    text-align does not work on an individual inline element itself; rather, it's used on the parent container to align the inline content within it [1]. In your code snippet, you are attempting to apply text-align: right; to the <strong> element itself.  -->
+    <div>
+        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, rem.</small> <br>
+        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, rem.</small> <br>
+        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, rem.</small> <br>
+    </div>
+    
+</body>
+</html>

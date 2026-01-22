@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS UNITS</title>
+    <link rel="icon" type="" href="Images/photo-1559563338-6806c84e85b0.jpeg">
+    <style>
+        span {
+            background-color: rgb(205, 227, 246);
+        }
+        .em-unit {
+            line-height: 16px;
+            font-size: 2em;
+        }
+        #rem-unit {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Two types of lenght unit are present (Absolute, Realtive)</h1>
+
+    <h2 style="color:red">Absolute lenths , but it not recommended don't use it</h2>
+    <p>The absolute length units are fixed and a length expressed in any of these will appear as exactly that size.</p>
+
+    <span style="font-size: 3cm;">Using centimeter</span> <br>
+    <span style="font-size: 10mm;">Using milimeter</span> <br>
+    <span style="font-size: 1in;">Using inches</span> <br>
+    <span style="font-size: 10px;">Using pixel</span> <br>
+    <span style="font-size: 10pt;">Using point</span> <br>
+    <span style="font-size: 1pc;">Using picas (1pc = 12 pt)</span> <br>
+
+    <h2 style="color:red">Relative length ,  recommended use it </h2>
+    <p>Relative length units specify a length relative to another length property. Relative length units scale better between different rendering medium.</p>
+
+
+    <p class="em-unit">These paragraphs have a calculated line-height of: 2x16px = 32px.</p> <br>
+    <p class="em-unit">These paragraphs have a calculated line-height of: 2x16px = 32px.</p> <br>
+
+    <div style="font-size: 10px;">
+        <p id="rem-unit">Relative to font-size of the root element</p> <br>
+        <p id="rem-unit">now div have the font size 10px but im appliying 2 rem on p so font size = 10 * 2 = 20 px</p> <br>
+    </div>
+
+    <p style="font-size: 20%;">vh means view port height</p>
+    <!-- <p style="font-size: 20vh;">vh means view port height</p> -->
+    
+</body>
+</html>
